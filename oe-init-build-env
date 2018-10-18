@@ -1,0 +1,8 @@
+#!/bin/sh
+
+THIS_SCRIPT=${BASH_SOURCE}
+DIR=$(dirname ${THIS_SCRIPT})
+export TEMPLATECONF="$(realpath ${DIR}/conf)"
+
+# source environment
+source ${DIR}/../poky/$(basename ${THIS_SCRIPT})
